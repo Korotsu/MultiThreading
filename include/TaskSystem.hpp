@@ -7,11 +7,6 @@
 #include "Task.hpp"
 #include "ThreadPool.hpp"
 
-void Foo(float a, float b, float c)
-{
-    std::cout << "Just Foo" << std::endl;
-}
-
 void UpdateTaskSystem(class TaskSystem* taskManager);
 
 class TaskSystem
@@ -46,12 +41,10 @@ public:
 
     void Run(int taskNumber, int threadNumber)
     {
-        //Task task = taskList[taskNumber];
         //std::cout << "Task of priority : " << taskList[taskNumber].priority << " Started ! And index is : " << taskNumber << " !" << std::endl; /* Print the priority in the console log */
         std::packaged_task<void()> task(taskList[taskNumber]);
         threadPool.threadList[threadNumber]->future = task.get_future();
         threadPool.threadList[threadNumber]->thread = new std::thread(std::move(task));
-        //threadPool.threadList[threadNumber]->thread->detach();
         taskList.erase(taskList.cbegin() + taskNumber);
     }
 

@@ -12,11 +12,12 @@ void foo(int a)
     {}
     
     //while (true);
-    //std::cout << a << std::endl;
+    std::cout << a << std::endl;
 }
 
 int main()
 {
+    std::cout << "START PROGRAM !" << std::endl;
 
     std::cout << "Le nombre de thread pouvant être utiliser par votre ordinateur est : " << std::thread::hardware_concurrency() << " !" << std::endl;
     std::cout << "Monothread : " << std::endl;
@@ -85,16 +86,12 @@ int main()
     taskManager.Add(PriorityEnum::Important,foo,20);
 
     while (taskManager.taskList.size() > 0){ /*std::cout << "Loading ..." << std::endl;*/};
-    for ( int i = 0; i < taskManager.threadPool.threadList.size(); i++)
-    {
-        //taskManager.threadPool.threadList[i]->thread->join();
-    }
 
     end = std::chrono::system_clock::now();
     elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
     std::cout << elapsed.count() << std::endl;
-    std::cout << "YOLO" << std::endl;
+    std::cout << "END PROGRAM !" << std::endl;
 
     return 0;
 }
