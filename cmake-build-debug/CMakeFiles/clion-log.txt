@@ -1,0 +1,4 @@
+"E:\CLion_Setup_Folder\CLion 2020.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" E:\Documents\Etudes\isart\GP2\Prog\Multithreading
+-- Configuring done
+-- Generating done
+-- Build files have been written to: E:/Documents/Etudes/isart/GP2/Prog/Multithreading/cmake-build-debug
