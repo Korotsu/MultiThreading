@@ -2,3 +2,5 @@
 **/*.d
 **/*.exe
 **/imgui.ini
+.vs/
+out/
