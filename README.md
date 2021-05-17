@@ -1,8 +1,10 @@
-The program allows you to launch functions with one or more Threads;
+# Multithreading
+ 
+## How to run ?
 
 To run the Program you need a compiler with Cmake. (Clion has been used in this case).
 
-In the program you can influence:
+## In the program you can influence:
 -the number of threads to use in the ThreaList array located in ThreadPool.hpp;
 -The number that the foo function should count before printing the text in main.cpp line 11;
 -Call the number of functions you want in main.cpp;
@@ -12,3 +14,7 @@ In the program you can influence:
 -Change the thread selection mode from manual (Default) to automatic by uncommenting lines 14,53-59 and commenting lines 15,61-67 of the
 ThreadPool.hpp, conversely to switch back to manual;
 -Display the executions by order of priority by uncommenting line 49 of TaskSystem.hpp, the reverse to hide;
+
+### And don't forget if
+![speed.gif](speed.gif)
+### Go Multithreaded !
